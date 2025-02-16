@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caja Fuerte</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100">
+
+  <!-- Header Section -->
+  <header class="bg-gray-200 shadow-md">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center p-5">
+      <div class="font-bold text-xl"><span class="text-yellow-500">H</span>ENRY</div>
+      <nav class="space-x-4">
+        <a href="C:\Users\User\Desktop\Landing\Landing.html" class="text-gray-700 hover:text-yellow-500"><button class="bg-gray-800 text-white py-2 px-6 rounded-full hover:bg-yellow-500 transition">Home</button></a>
+        <a href="C:\Users\User\Desktop\Landing\Contraceña.html" class="text-gray-700 hover:text-yellow-500">Generar contraseña</a>
+        <a href="C:\Users\User\Desktop\Landing\Caja.html" class="text-gray-700 hover:text-yellow-500">Caja Fuerte</a>
+        <a href="C:\Users\User\Desktop\Landing\Monitoreo.html" class="text-gray-700 hover:text-yellow-500">Monitoreo de actividad</a>
+        <a href="C:\Users\User\Desktop\Landing\Usuarios.html" class="text-gray-700 hover:text-yellow-500">Gestión de usuarios</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--main section-->
+  <main class="py-6 px4 sm:px-6 lg:px-8">
+    <div class="text-center mb-6">
+        <h1 class="text-4xl font-bold text-black">Asistente De Seguridad</h1>
+        <p class="text-xl mt-2 text-black"><button class="bg-yellow-300 text-gray-800 py-2 px-6 rounded-full">CAJA FUERTE</button></p>
+    </div>
+
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <form action="#" method="POST">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="codigo-secreto" class="block text-gray-700">Código Secreto</label>
+                        <input type="password" id="codigo-secreto" class="w-full p-2 border rounded-md" placeholder="Ingresa el código secreto">
+                    </div>
+                    <div>
+                        <label for="intentos" class="block text-gray-700">Cantidad de intentos</label>
+                        <input type="number" id="intentos" class="w-full p-2 border rounded-md" placeholder="Cantidad de intentos">
+                    </div>
+                    <div class="mt-6 flex justify-between">
+                    <button type="submit" class="bg-black text-white py-2 px-6 rounded-md font-bold">GUARDAR</button>
+                </div>
+                </div>
+
+                <div class="mt-6">
+                    <label for="validar-codigo" class="block text-gray-700">Validar Código Secreto</label>
+                    <input type="password" id="validar-codigo" class="w-full p-2 border rounded-md" placeholder="Ingresa el código para validar">
+                </div>
+
+                <div class="mt-6 text-center">
+                    <button type="button" class="bg-black text-white py-2 px-6 rounded-md font-bold">VALIDAR CÓDIGO</button>
+                    <button type="reset" class="bg-black text-white py-2 px-6 rounded-md font-bold">RESET</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+    <p>&copy; 2025 Henry. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

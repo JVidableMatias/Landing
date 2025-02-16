@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseña</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function generarContrasena() {
+            const longitud = document.getElementById("longitud").value;
+            const incluirEspeciales = document.getElementById("especiales").checked;
+            const incluirNumeros = document.getElementById("numeros").checked;
+            const incluirMayusculas = document.getElementById("mayusculas").checked;
+
+            const caracteresEspeciales = "!@#$%^&*()_+[]{}|;:,.<>?";
+            const numeros = "0123456789";
+            const mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const minusculas = "abcdefghijklmnopqrstuvwxyz";
+
+            let caracteresPermitidos = minusculas;
+            if (incluirEspeciales) caracteresPermitidos += caracteresEspeciales;
+            if (incluirNumeros) caracteresPermitidos += numeros;
+            if (incluirMayusculas) caracteresPermitidos += mayusculas;
+
+            let contrasena = '';
+            for (let i = 0; i < longitud; i++) {
+                const randomIndex = Math.floor(Math.random() * caracteresPermitidos.length);
+                contrasena += caracteresPermitidos[randomIndex];
+            }
+
+            document.getElementById("contrasena").textContent = contrasena;
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <header class="bg-gray-200 shadow-md">
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center p-5">
+            <div class="font-bold text-xl"><span class="text-yellow-500">H</span>ENRY</div>
+            <nav class="space-x-4">
+                <a href="C:\Users\User\Desktop\Landing\Landing.html" class="text-gray-700 hover:text-yellow-500"><button class="bg-gray-800 text-white py-2 px-6 rounded-full hover:bg-yellow-500 transition">Home</button></a>
+                <a href="C:\Users\User\Desktop\Landing\Contraceña.html" class="text-gray-800 mx-4 hover:text-yellow-500">Generar contraseña</a>
+                <a href="C:\Users\User\Desktop\Landing\Caja.html" class="text-gray-800 mx-4 hover:text-yellow-500">Caja Fuerte</a>
+                <a href="C:\Users\User\Desktop\Landing\Monitoreo.html" class="text-gray-800 mx-4 hover:text-yellow-500">Monitoreo de actividad</a>
+                <a href="C:\Users\User\Desktop\Landing\Usuarios.html" class="text-gray-800 mx-4 hover:text-yellow-500">Gestión de usuarios</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8 px-4">
+        <div class="text-center mb-6">
+            <h1 class="text-4xl font-bold text-black">Asistente De Seguridad</h1>
+            <p class="text-xl mt-2 text-black"><button class="bg-yellow-300 text-gray-800 py-2 px-6 rounded-full">Generador de contraseñas para usuarios:</button></p>
+        </div>
+
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-md mx-auto">
+            <form id="passwordForm" class="space-y-4">
+                <div>
+                    <label for="longitud" class="block font-medium text-lg">Cantidad de caracteres deseados</label>
+                    <input type="number" id="longitud" name="longitud" min="8" max="64" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                </div>
+
+                <div>
+                    <label for="especiales" class="flex items-center">
+                        <input type="checkbox" id="especiales" name="especiales" class="mr-2">
+                        Incluir caracteres especiales?
+                    </label>
+                    <label for="numeros" class="flex items-center">
+                        <input type="checkbox" id="numeros" name="numeros" class="mr-2">
+                        Incluir caracteres números?
+                    </label>
+                    <label for="mayusculas" class="flex items-center">
+                        <input type="checkbox" id="mayusculas" name="mayusculas" class="mr-2">
+                        Incluir caracteres mayúsculas?
+                    </label>
+                </div>
+
+                <div>
+                    <button type="button" onclick="generarContrasena()" class="w-full py-2 px-4 bg-gray-800 text-white rounded-lg font-semibold">Generar contraseña</button>
+                </div>
+            </form>
+
+            <div class="mt-6">
+                <h3 class="text-xl font-bold">Contraseña generada:</h3>
+                <p id="contrasena" class="mt-2 bg-gray-200 p-2 rounded-lg text-center text-xl font-mono"></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+    <p>&copy; 2025 Henry. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

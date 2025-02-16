@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Monitoreo de actividad sospechosa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100">
+
+  <!-- Header Section -->
+  <header class="bg-gray-200 shadow-md">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center p-5">
+      <div class="font-bold text-xl"><span class="text-yellow-500">H</span>ENRY</div>
+      <nav class="space-x-4">
+        <a href="C:\Users\User\Desktop\Landing\Landing.html" class="text-gray-700 hover:text-yellow-500"><button class="bg-gray-800 text-white py-2 px-6 rounded-full hover:bg-yellow-500 transition">Home</button></a>
+        <a href="C:\Users\User\Desktop\Landing\Contraceña.html" class="text-gray-700 hover:text-yellow-500">Generar contraseña</a>
+        <a href="C:\Users\User\Desktop\Landing\Caja.html" class="text-gray-700 hover:text-yellow-500">Caja Fuerte</a>
+        <a href="C:\Users\User\Desktop\Landing\Monitoreo.html" class="text-gray-700 hover:text-yellow-500">Monitoreo de actividad</a>
+        <a href="C:\Users\User\Desktop\Landing\Usuarios.html" class="text-gray-700 hover:text-yellow-500">Gestión de usuarios</a>
+      </nav>
+    </div>
+  </header>
+
+   <!--main section-->
+   <main class="py-6 px4 sm:px-6 lg:px-8">
+    <div class="text-center mb-6">
+        <h1 class="text-4xl font-bold text-black">Asistente De Seguridad</h1>
+        <p class="text-xl mt-2 text-black"><button class="bg-yellow-300 text-gray-800 py-2 px-6 rounded-full">SISTEMA DE MONITOREO DE ACTIVIDAD SOSPECHOSA</button></p>
+    </div>
+
+            <form id="activityForm" class="text-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="descripcion" class="block text-gray-700">Descripción</label>
+                        <input type="text" id="descripcion" name="descripcion" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500" placeholder="Descripción de la actividad">
+                    </div>
+                    <div>
+                        <label for="nivelRiesgo" class="block text-gray-700">Nivel de riesgo</label>
+                        <input type="text" id="nivelRiesgo" name="nivelRiesgo" class="max-w-screen-xl px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500" placeholder="Bajo, medio, alto">
+                        <button type="button" class="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800">AGREGAR ACTIVIDAD</button>
+                    </div>
+                    
+                </div>
+
+                <div class="mt-6">
+                    <label for="reportes" class="block text-gray-700">Eliminar actividad sospechosa</label>
+                    <input type="text" id="reportes" name="reportes" class="max-w-screen-xl px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500" placeholder="Eliminar actividade sospechosa">
+                    <button type="button" class="bg-black text-white px-6 py-2 mt-4 rounded-lg hover:bg-gray-800">ELIMINAR ACTIVIDAD</button>
+                </div>
+                
+                <div class="mt-6">
+                    <label for="reportes" class="block text-gray-700">Filtra actividades por el nivel de riesgo</label>
+                    <input type="text" id="reportes" name="reportes" class="max-w-screen-xl px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500" placeholder="Filtrar riesgo de actividades">
+                    <button type="button" class="bg-black text-white px-6 py-2 mt-4 rounded-lg hover:bg-gray-800">MOSTRAR ACTIVIDADES</button>
+                </div>
+                    
+                <div class="mt-6">
+                    <label for="reportes" class="block text-gray-700">Reporte de actividades</label>
+                    <input type="text" id="reportes" name="reportes" class="max-w-screen-xl px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500" placeholder="Generar reporte de actividades">
+                    <button type="button" class="bg-black text-white px-6 py-2 mt-4 rounded-lg hover:bg-gray-800">GENERAR REPORTE</button>
+                </div>
+            </form>
+
+            <div class="text-center mt-8">
+                <h2 class="text-xl font-bold text-gray-700">Lista de actividades</h2>
+                <ul id="activityList" class="mt-4 space-y-4 text-gray-700">
+                    <li>Id: 0 Descripción: msj my, Riesgo - medio</li>
+                    <li>Id: 1 Descripción: msj help!, Riesgo - alto</li>
+                    <li>Id: 2 Descripción: msj span, Riesgo - bajo</li>
+                    <li>Id: 3 Descripción: msj lose, Riesgo - alto</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Add JavaScript functionality to dynamically interact with the form (if needed).
+        // This can be further expanded based on requirements.
+
+        document.querySelector("button.bg-black").addEventListener("click", function() {
+            alert("Activity Added!");
+        });
+    </script>
+
+    <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+    <p>&copy; 2025 Henry. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

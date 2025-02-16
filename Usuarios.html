@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de perfiles</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+  <!-- Header Section -->
+  <header class="bg-gray-200 shadow-md">
+    <!-- Navbar -->
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center p-5">
+      <div class="font-bold text-xl"><span class="text-yellow-500">H</span>ENRY</div>
+      <nav class="space-x-4">
+        <a href="C:\Users\User\Desktop\Landing\Landing.html" class="text-gray-700 hover:text-yellow-500"><button class="bg-gray-800 text-white py-2 px-6 rounded-full hover:bg-yellow-500 transition">Home</button></a>
+        <a href="C:\Users\User\Desktop\Landing\Contraceña.html" class="text-gray-700 hover:text-yellow-500">Generar contraseña</a>
+        <a href="C:\Users\User\Desktop\Landing\Caja.html" class="text-gray-700 hover:text-yellow-500">Caja Fuerte</a>
+        <a href="C:\Users\User\Desktop\Landing\Monitoreo.html" class="text-gray-700 hover:text-yellow-500">Monitoreo de actividad</a>
+        <a href="C:\Users\User\Desktop\Landing\Usuarios.html" class="text-gray-700 hover:text-yellow-500">Gestión de usuarios</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--main Content-->
+  <main class="py-6 px4 sm:px-6 lg:px-8">
+    <div class="text-center mb-6">
+        <h1 class="text-4xl font-bold text-black">Asistente De Seguridad</h1>
+        <p class="text-xl mt-2 text-black"><button class="bg-yellow-300 text-gray-800 py-2 px-6 rounded-full">GESTIÓN DE PERFILES</button></p>
+    </div>
+
+      <!-- Profile Form Section -->
+      <div class="text-center mb-6">
+        <div>
+          <label for="title" class="block font-medium">Ver Perfiles</label>
+          <input type="text" id="title" class="max-w-screen-xl p-2 border border-gray-300 rounded-md" placeholder="Título">
+          <button class="bg-gray-800 text-white py-2 px-4 rounded-md mt-2 hover:bg-gray-900">VER</button>
+        </div>
+        <br>
+        <div>
+          <label for="age" class="block font-medium">Ver Perfiles Por Antigüedad</label>
+          <input type="text" id="age" class="max-w-screen-xl p-2 border border-gray-300 rounded-md" placeholder="Antigüedad">
+          <button class="bg-gray-800 text-white py-2 px-4 rounded-md mt-2 hover:bg-gray-900">VER</button>
+        </div>
+        <br>
+        <div>
+          <label for="admin" class="block font-medium">Ver Administradores</label><button class="bg-gray-800 text-white py-2 px-4 rounded-md mt-2 hover:bg-gray-900">VER</button>
+          
+        </div>
+        <br>
+        <!-- Modify Access Section -->
+        <div class="text-center mb-6">
+          <h3 class="font-medium">Modificar Acceso</h3>
+          <label for="user" class="block">Usuario</label>
+          <input type="text" id="user" class="max-w-screen-xl p-2 border border-gray-300 rounded-md" placeholder="Usuario">
+          <br>
+          <label for="new-code" class="block mt-4">Nuevo código de acceso</label>
+          <input type="text" id="new-code" class="max-w-screen-xl p-2 border border-gray-300 rounded-md" placeholder="Nuevo código">
+          
+          <button class="bg-blue-500 text-white py-2 px-4 rounded-md mt-4 hover:bg-blue-600">ACTUALIZAR</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- User List Section -->
+    <div class="bg-white p-6 rounded-lg shadow-lg mt-8">
+      <h3 class="text-xl font-medium mb-4">Usuarios</h3>
+      <table class="w-full table-auto border-collapse">
+        <thead>
+          <tr>
+            <th class="px-4 py-2 border">Usuario</th>
+            <th class="px-4 py-2 border">Código</th>
+            <th class="px-4 py-2 border">Nivel de autorización</th>
+            <th class="px-4 py-2 border">Antigüedad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="px-4 py-2 border">Fabricio</td>
+            <td class="px-4 py-2 border">123</td>
+            <td class="px-4 py-2 border">bajo</td>
+            <td class="px-4 py-2 border">12</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border">Facundo</td>
+            <td class="px-4 py-2 border">5678</td>
+            <td class="px-4 py-2 border">medio</td>
+            <td class="px-4 py-2 border">24</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border">Valentin</td>
+            <td class="px-4 py-2 border">901</td>
+            <td class="px-4 py-2 border">alto</td>
+            <td class="px-4 py-2 border">35</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border">Matías</td>
+            <td class="px-4 py-2 border">1122</td>
+            <td class="px-4 py-2 border">admin</td>
+            <td class="px-4 py-2 border">48</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border">Rodrigo</td>
+            <td class="px-4 py-2 border">334</td>
+            <td class="px-4 py-2 border">bajo</td>
+            <td class="px-4 py-2 border">6</td>
+          </tr>
+          <!-- More rows can be added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+    <p>&copy; 2025 Henry. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
